@@ -1,0 +1,129 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 76176 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:323), pid=3216, tid=10928
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_67-b01) (build 1.7.0_67-b01)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.65-b04 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000d29c000):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=10928, stack(0x000000000eb90000,0x000000000ec90000)]
+
+Stack: [0x000000000eb90000,0x000000000ec90000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+
+Current CompileTask:
+C2:  12942 1055             com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl::scanDocument (272 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000012b86800 JavaThread "http-bio-8086-AsyncTimeout" daemon [_thread_blocked, id=988, stack(0x0000000015a40000,0x0000000015b40000)]
+  0x0000000012b8b800 JavaThread "http-bio-8086-Acceptor-0" daemon [_thread_in_native, id=9612, stack(0x0000000015940000,0x0000000015a40000)]
+  0x0000000012b88000 JavaThread "ContainerBackgroundProcessor[StandardEngine[Tomcat]]" daemon [_thread_blocked, id=8944, stack(0x0000000015840000,0x0000000015940000)]
+  0x0000000012b8d000 JavaThread "ActiveMQ Session Task-1" [_thread_blocked, id=1380, stack(0x0000000015740000,0x0000000015840000)]
+  0x0000000012b85800 JavaThread "ActiveMQ InactivityMonitor WriteCheckTimer" daemon [_thread_blocked, id=3120, stack(0x0000000015640000,0x0000000015740000)]
+  0x0000000012b89800 JavaThread "ActiveMQ InactivityMonitor ReadCheckTimer" daemon [_thread_blocked, id=11136, stack(0x0000000015540000,0x0000000015640000)]
+  0x0000000012b8c800 JavaThread "org.springframework.jms.listener.DefaultMessageListenerContainer#0-1" [_thread_blocked, id=15428, stack(0x0000000015340000,0x0000000015440000)]
+  0x0000000012967000 JavaThread "ActiveMQ Transport: tcp:///192.168.78.139:61616@5268" [_thread_in_native, id=12164, stack(0x0000000015240000,0x0000000015340000)]
+  0x0000000012966800 JavaThread "dubbo-remoting-client-heartbeat-thread-1" daemon [_thread_blocked, id=13280, stack(0x0000000015140000,0x0000000015240000)]
+  0x0000000012965800 JavaThread "DubboClientHandler-192.168.137.1:20880-thread-1" daemon [_thread_blocked, id=656, stack(0x0000000015040000,0x0000000015140000)]
+  0x0000000012964000 JavaThread "Hashed wheel timer #1" [_thread_blocked, id=10768, stack(0x0000000014f40000,0x0000000015040000)]
+  0x0000000012963800 JavaThread "DubboClientReconnectTimer-thread-1" daemon [_thread_blocked, id=16196, stack(0x0000000014e40000,0x0000000014f40000)]
+  0x0000000012965000 JavaThread "New I/O boss #6" daemon [_thread_in_native, id=1980, stack(0x0000000014d40000,0x0000000014e40000)]
+  0x000000001296a000 JavaThread "New I/O worker #5" daemon [_thread_in_native, id=13564, stack(0x0000000014c40000,0x0000000014d40000)]
+  0x0000000012968800 JavaThread "New I/O worker #4" daemon [_thread_in_native, id=6928, stack(0x0000000014b40000,0x0000000014c40000)]
+  0x0000000012969800 JavaThread "New I/O worker #3" daemon [_thread_in_native, id=7204, stack(0x0000000014a40000,0x0000000014b40000)]
+  0x0000000012968000 JavaThread "New I/O worker #2" daemon [_thread_in_native, id=10524, stack(0x0000000014840000,0x0000000014940000)]
+  0x0000000010893800 JavaThread "New I/O worker #1" daemon [_thread_in_native, id=5884, stack(0x0000000014740000,0x0000000014840000)]
+  0x0000000012a25800 JavaThread "DubboSaveRegistryCache-thread-1" daemon [_thread_blocked, id=15712, stack(0x0000000014640000,0x0000000014740000)]
+  0x0000000010b39800 JavaThread "localhost-startStop-1-EventThread" daemon [_thread_blocked, id=15836, stack(0x0000000014440000,0x0000000014540000)]
+  0x0000000010aad800 JavaThread "localhost-startStop-1-SendThread(192.168.78.139:2181)" daemon [_thread_in_native, id=13088, stack(0x0000000014340000,0x0000000014440000)]
+  0x0000000012b57800 JavaThread "ZkClient-EventThread-19-192.168.78.139:2181" daemon [_thread_blocked, id=3372, stack(0x0000000014240000,0x0000000014340000)]
+  0x0000000010065000 JavaThread "DubboRegistryFailedRetryTimer-thread-1" daemon [_thread_blocked, id=11352, stack(0x0000000013110000,0x0000000013210000)]
+  0x0000000010656800 JavaThread "Thread-2" daemon [_thread_in_native, id=7724, stack(0x0000000013010000,0x0000000013110000)]
+  0x00000000108fd800 JavaThread "localhost-startStop-1" daemon [_thread_blocked, id=2272, stack(0x0000000011f40000,0x0000000012040000)]
+  0x0000000010924800 JavaThread "Tomcat-startStop-1" daemon [_thread_blocked, id=7352, stack(0x0000000011e40000,0x0000000011f40000)]
+  0x000000000d29d000 JavaThread "Service Thread" daemon [_thread_blocked, id=11944, stack(0x000000000ed90000,0x000000000ee90000)]
+  0x000000000d299000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=2092, stack(0x000000000ec90000,0x000000000ed90000)]
+=>0x000000000d29c000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=10928, stack(0x000000000eb90000,0x000000000ec90000)]
+  0x000000000d288800 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=8276, stack(0x000000000ea90000,0x000000000eb90000)]
+  0x000000000d285000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=11060, stack(0x000000000e990000,0x000000000ea90000)]
+  0x000000000d280000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=3452, stack(0x000000000e7d0000,0x000000000e8d0000)]
+  0x000000000d26f800 JavaThread "Attach Listener" daemon [_thread_blocked, id=14764, stack(0x000000000e6d0000,0x000000000e7d0000)]
+  0x000000000d26d000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1684, stack(0x000000000e5d0000,0x000000000e6d0000)]
+  0x000000000d221000 JavaThread "Finalizer" daemon [_thread_blocked, id=10588, stack(0x000000000e4d0000,0x000000000e5d0000)]
+  0x000000000d218000 JavaThread "Reference Handler" daemon [_thread_blocked, id=1348, stack(0x000000000e3d0000,0x000000000e4d0000)]
+  0x0000000004ec2800 JavaThread "main" [_thread_blocked, id=16144, stack(0x00000000049e0000,0x0000000004ae0000)]
+
+Other Threads:
+  0x000000000d213000 VMThread [stack: 0x000000000e2d0000,0x000000000e3d0000] [id=13300]
+  0x000000000d2b5000 WatcherThread [stack: 0x000000000ee90000,0x000000000ef90000] [id=12196]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 219648K, used 31704K [0x00000007d6100000, 0x00000007e5480000, 0x0000000800000000)
+  eden space 191488K, 5% used [0x00000007d6100000,0x00000007d6c12c08,0x00000007e1c00000)
+  from space 28160K, 72% used [0x00000007e3800000,0x00000007e4be3430,0x00000007e5380000)
+  to   space 28672K, 0% used [0x00000007e1c00000,0x00000007e1c00000,0x00000007e3800000)
+ ParOldGen       total 128512K, used 75602K [0x0000000782400000, 0x000000078a180000, 0x00000007d6100000)
+  object space 128512K, 58% used [0x0000000782400000,0x0000000786dd4a00,0x000000078a180000)
+ PSPermGen       total 53760K, used 46715K [0x000000077d200000, 0x0000000780680000, 0x0000000782400000)
+  object space 53760K, 86% used [0x000000077d200000,0x000000077ff9eef8,0x0000000780680000)
+
+Card table byte_map: [0x0000000008080000,0x00000000084a0000] byte_map_base: 0x0000000004497000
+
+Polling page: 0x0000000002d10000
+
+Code Cache  [0x0000000004fc0000, 0x0000000005380000, 0x0000000007fc0000)
+ total_blobs=1389 nmethods=970 adapters=378 free_code_cache=45374Kb largest_free_block=46402880
+
+Compilation events (10 events):
+Event: 12.613 Thread 0x000000000d29c000 1051             java.io.DataOutputStream::writeByte (14 bytes)
+Event: 12.613 Thread 0x000000000d29c000 nmethod 1051 0x0000000005366d50 code [0x0000000005366ea0, 0x0000000005366f58]
+Event: 12.619 Thread 0x000000000d299000 1052             java.io.DataInputStream::readUTF (501 bytes)
+Event: 12.644 Thread 0x000000000d299000 nmethod 1052 0x000000000537d190 code [0x000000000537d380, 0x000000000537e568]
+Event: 12.821 Thread 0x000000000d29c000 1053             java.lang.Class::checkMemberAccess (67 bytes)
+Event: 12.822 Thread 0x000000000d29c000 nmethod 1053 0x0000000005366b10 code [0x0000000005366c40, 0x0000000005366cd8]
+Event: 12.839 Thread 0x000000000d299000 1054             org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory::predictBeanType (126 bytes)
+Event: 12.847 Thread 0x000000000d299000 nmethod 1054 0x000000000536bad0 code [0x000000000536bc80, 0x000000000536c418]
+Event: 12.912 Thread 0x000000000d29c000 1055             com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl::scanDocument (272 bytes)
+Event: 12.912 Thread 0x000000000d299000 1056   !         org.apache.tomcat.util.IntrospectionUtils::setProperty (925 bytes)
+
+GC Heap History (10 events):
+Event: 8.290 GC heap before
+{Heap before GC invocations=11 (full 0):
+ PSYoungGen      total 219648K, used 209880K [0x00000007d6100000, 0x00000007e5480000, 0x0000000800000000)
+  eden space 191488K, 100% used [0x00000007d6100000,0x00000007e1c00000,0x00000007e1c00000)
+  from space 28160K, 65% used [0x00000007e3800000,0x00000007e49f6270,0x00000007e5380000)
+  to   space 28672K, 0% used [0x00000007e1c00000,0x00000007e1c00000,0x00000007e3800000)
+ ParOldGen       total 85504K, used 40689K [0x0000000782400000, 0x0000000787780000, 0x00000007d6100000)
+  object space 85504K, 47% used [0x0000000782400000,0x0000000784bbc6d8,0x0000000787780000)
+ PSPermGen       total 27136K, used 26709K [0x000000077d200000, 0x000000077ec80000, 0x0000000782400000)
+  object space 27136K, 98% used [0x000000077d200000,0x000000077ec15430,0x000000077ec80000)
+Event: 8.319 
